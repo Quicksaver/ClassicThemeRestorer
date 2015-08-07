@@ -121,6 +121,11 @@
 	  -moz-padding-start: 4px !important;
 	  transition: none !important;
 	}
+	
+	#main-window[fx42plus="true"] #nav-bar #notification-popup-box[hidden] + *,
+	#main-window[fx42plus="true"] #nav-bar #notification-popup-box + * {
+	  -moz-padding-start: 6px !important;
+	}
 
 	#nav-bar #urlbar-container[forwarddisabled]:hover:not([switchingtabs]) > #urlbar-wrapper > #urlbar {
 	  transition-delay: 0s !important;
@@ -134,7 +139,11 @@
 	#main-window #navigator-toolbox #nav-bar #urlbar-wrapper {
 	  -moz-box-align: center !important;
 	}
-	
+
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	  min-height: 24px;
+	}
+
 	#main-window[defaultfxtheme="true"] #urlbar,
 	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox{
 	  border: 1px solid !important;
@@ -231,5 +240,28 @@
 	#nav-bar #zoompage-zoomdisplay-n image,
 	#nav-bar #zoompage-zoomout-n image{
 	  padding:0px !important;
+	}
+	
+	/* special buttons inside urlbars boxes */
+	#urlbar #notification-popup-box + box toolbarbutton,
+	#urlbar #notification-popup-box + box toolbarbutton .toolbarbutton-icon,
+	#urlbar-icons toolbarbutton[type="menu"],
+	#urlbar-icons toolbarbutton[type="menu"] .toolbarbutton-icon {
+	  -moz-appearance: none !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  background: unset !important;
+	}
+
+	/*Tile tabs tweaks*/
+	#navigator-toolbox #nav-bar #tiletabs-buttonmenu .toolbarbutton-menubutton-button image {
+      margin-right: unset !important;
+      padding-right: unset !important;
+	  padding: 0 !important;
+	  -moz-margin-start: 1px !important;
 	}
 }

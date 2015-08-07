@@ -24,6 +24,7 @@
 
 <overlay id="classic_theme_restorer-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
+	<!--script type="application/javascript" src="chrome://browser/content/browser.js"/-->
 	<script type="application/x-javascript" src="overlay.js"/>
 
 	<commandset id="mainCommandSet">
@@ -39,26 +40,20 @@
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
 		 <hbox id="ctraddon_cuibuttonsbox" ordinal="1000" collapsed="true">
-			<grid>
-			  <rows>
-				<row>
-				  <button label="&Ctr_cuibuttons;" id="ctraddon_cuibuttons_main" class="ctraddon_cuibutlabel customizationmode-button"/>
-				  <button label="&Ctr_cuibutnormal;" id="ctraddon_cui-smallnavbut-button1" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);"/>
-				  <button label="&Ctr_cuibutsmall;" id="ctraddon_cui-smallnavbut-button2" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);"/>
-				  <label value=" "/>
-				  <button label="&Ctr_cuimode;" class="ctraddon_cuibutlabel customizationmode-button"/>
-				  <button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
-				  <button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
-				  <button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
-				  <label value=" "/>
-				  <button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
-				</row>
-			  </rows>
-			</grid>
+			<button label="&Ctr_cuibuttons;" id="ctraddon_cuibuttons_main" class="ctraddon_cuibutlabel customizationmode-button"/>
+			<button label="&Ctr_cuibutnormal;" id="ctraddon_cui-smallnavbut-button1" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);"/>
+			<button label="&Ctr_cuibutsmall;" id="ctraddon_cui-smallnavbut-button2" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);"/>
+			<button label="&Ctr_cuimode;" class="ctraddon_cuibutlabel customizationmode-button"/>
+			<button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
+			<button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
+			<button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
+			<spacer id="ctraddon_cui_spacer"/>
+			<button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
+			<button label="&Ctr_extrabar;" id="ctraddon_cui-addtoolbars" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.additionalToolbars();"/>
 		 </hbox>
 	  </vbox>
 	</hbox>
-	
+
 	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
 		<toolbar id="ctraddon_addon-bar" customizable="true"
@@ -72,7 +67,7 @@
 				 accesskey="&Ctr_addon-bar.accesskey;"
 				 key="key_toggleCtrAddonBar"
 				 defaultset="ctraddon_addonbar-close,spring,ctraddon_statusbar">
-		  <toolbarbutton id="ctraddon_addonbar-close" removable="false"
+		  <toolbarbutton id="ctraddon_addonbar-close" removable="false" class="close-icon"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
 					
 		  <toolbaritem id="ctraddon_statusbar"
@@ -121,12 +116,27 @@
 	  <menuseparator id="ctraddon_connavsep" insertbefore="context-bookmarkpage"/>
 	</menugroup>
 	
+	<menuitem id="context-back" label="&backCmd.label;" accesskey="&backCmd.accesskey;"/>
+	<menuitem id="context-forward" label="&forwardCmd.label;" accesskey="&forwardCmd.accesskey;"/>
+	<menuitem id="context-reload" label="&reloadCmd.label;" accesskey="&reloadCmd.accesskey;"/>
+	<menuitem id="context-stop" label="&stopCmd.label;" accesskey="&stopCmd.accesskey;"/>
+	<menuitem id="context-bookmarkpage" label="&bookmarkThisPageCmd.label;" accesskey="&bookmarkPageCmd2.accesskey;"/>
+	
+	<menupopup id="toolbar-context-menu">
+	  <menuitem id="toggle_nav-bar"
+                label="&navbarCmd.label;"
+                toolbarid="nav-bar"
+				oncommand="classicthemerestorerjs.ctr.toggleCtrNavBar();"
+				type="checkbox"
+				insertbefore="viewToolbarsMenuSeparator"/>
+	</menupopup>
+	
 	<!--### add a menuitem to bookmarks context menu to open a bookmark in a new private window ###-->
 	<menugroup id="placesContext">
 	  <menuitem id="ctraddon_placesContext_openInPrivatewindow"
                 label="&Ctr_openInPrivateWindow;"
                 accesskey="&Ctr_openInPrivateWindow.accesskey;"
-				oncommand="openLinkIn(document.getElementById('placesContext').triggerNode._placesNode.uri, 'window', {private: true});"
+				oncommand="classicthemerestorerjs.ctr.openInPrWin();"
 				selectiontype="single"
 				selection="link"
 				insertbefore="placesContext_openSeparator"/>
@@ -144,7 +154,7 @@
 	<toolbarbutton id="webrtc-status-button" removable="true"/>
 	<toolbarbutton id="social-share-button" removable="true"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
-
+	
 	<toolbar id="TabsToolbar">
       <toolbarbutton id="ctraddon_tabs-closebutton"
                      class="close-button tabs-closebutton close-icon"
@@ -401,8 +411,8 @@
 					  class="menuitem-iconic"/>
 			<menuitem id="appmenu-quit"
 					  class="menuitem-iconic ctraddon_windowsonly"
-					  label="&quitApplicationCmdWin.label;"
-					  accesskey="&quitApplicationCmdWin.accesskey;"
+					  label="&quitApplicationCmdWin.label;&quitApplicationCmdWin2.label;"
+					  accesskey="&quitApplicationCmdWin.accesskey;&quitApplicationCmdWin2.accesskey;"
 					  command="cmd_quitApplication"/>
 			<menuitem id="appmenu-quit"
 					  class="menuitem-iconic ctraddon_linuxonly"
@@ -475,6 +485,19 @@
 							   context="placesContext"
 							   onpopupshowing="if (!this.parentNode._placesView)
 												 new PlacesMenu(event, 'place:folder=TOOLBAR');"/>
+				  </menu>
+				  <menu id="appmenu_BMB_readingList"
+						class="menu-iconic bookmark-item"
+						label="&readingList.label;"
+						container="true">
+					  <observes element="readingListSidebar" attribute="hidden"/>
+					  <menupopup id="appmenu_BMB_readingListPopup"
+								 placespopup="true"
+								 onpopupshowing="ReadingListUI.onReadingListPopupShowing(this);">
+						<menuitem id="appmenu_BMB_viewReadingListSidebar"
+								  oncommand="SidebarUI.show('readingListSidebar');"
+								  label="&readingList.showSidebar.label;"/>
+					  </menupopup>
 				  </menu>
 				  <menuseparator/>
 				  <!-- Bookmarks menu items -->
@@ -616,24 +639,24 @@
 				<menuitem id="appmenu_openHelp"
 						  oncommand="openHelpLink('firefox-help')"
 						  onclick="checkForMiddleClick(this, event);"
-						  label="&productHelp.label;"
-						  accesskey="&productHelp.accesskey;"/>
+						  label="&productHelp.label;&productHelp2.label;"
+						  accesskey="&productHelp.accesskey;&productHelp2.accesskey;"/>
 				<menuitem id="appmenu_gettingStarted"
 						  label="&appMenuGettingStarted.label;"
 						  oncommand="gBrowser.loadOneTab('https://www.mozilla.org/firefox/central/', {inBackground: false});"
 						  onclick="checkForMiddleClick(this, event);"/>
 				<menuitem id="appmenu_openTour"
 						  oncommand="openTourPage();"
-						  label="&helpShowTour.label;"
-						  accesskey="&helpShowTour.accesskey;"/>
+						  label="&helpShowTour.label;&helpShowTour2.label;"
+						  accesskey="&helpShowTour.accesskey;&helpShowTour2.accesskey;"/>
 				<menuitem id="appmenu_keyboardShortcuts"
 						  oncommand="openHelpLink('keyboard-shortcuts')"
 						  onclick="checkForMiddleClick(this, event);"
 						  label="&helpKeyboardShortcuts.label;"
 						  accesskey="&helpKeyboardShortcuts.accesskey;"/>
 				<menuitem id="appmenu_healthReport"
-						  label="&healthReport.label;"
-						  accesskey="&healthReport.accesskey;"
+						  label="&healthReport.label;&healthReport2.label;"
+						  accesskey="&healthReport.accesskey;&healthReport2.accesskey;"
 						  oncommand="openHealthReport()"
 						  onclick="checkForMiddleClick(this, event);"/>
 				<menuitem id="appmenu_troubleshootingInfo"
@@ -653,8 +676,8 @@
 						  oncommand="safeModeRestart();"/>
 				<menuseparator/>
 				<menuitem id="appmenu_about"
-						  accesskey="&aboutProduct.accesskey;"
-						  label="&aboutProduct.label;"
+						  accesskey="&aboutProduct.accesskey;&aboutProduct2.accesskey;"
+						  label="&aboutProduct.label;&aboutProduct2.label;"
 						  oncommand="openAboutDialog();"/>
 			  </menupopup>
 			</menu>
@@ -687,7 +710,8 @@
                      persist="class"
                      removable="true"
                      type="menu"
-                     label="&historyButton.label;">
+                     label="&historyButton.label;"
+					 tooltiptext="&historyButton.label;">
 				  <menupopup id="ctraddon_history_historyMenupopup"
 							 placespopup="true"
 							 oncommand="this.parentNode._placesView._onCommand(event);"
@@ -795,7 +819,21 @@
                        onpopupshowing="if (!this.parentNode._placesView)
                                          new PlacesMenu(event, 'place:folder=TOOLBAR');"/>
           </menu>
+          <menu id="ctraddon_BMB_readingList"
+                class="menu-iconic bookmark-item"
+                label="&readingList.label;"
+                container="true">
+              <observes element="readingListSidebar" attribute="hidden"/>
+              <menupopup id="ctraddon_BMB_readingListPopup"
+                         placespopup="true"
+                         onpopupshowing="ReadingListUI.onReadingListPopupShowing(this);">
+                <menuitem id="ctraddon_BMB_viewReadingListSidebar"
+                          oncommand="SidebarUI.show('readingListSidebar');"
+                          label="&readingList.showSidebar.label;"/>
+              </menupopup>
+          </menu>
           <menuseparator/>
+
           <!-- Bookmarks menu items -->
           <menuseparator builder="end"
                          class="hide-if-empty-places-result"/>
@@ -864,7 +902,7 @@
           <toolbarbutton id="ctraddon_back-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                          label="&backCmd.label;"
                          command="Browser:BackOrBackDuplicate"
-						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
+						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this,event);"
 						 onclick="checkForMiddleClick(this, event);"
                          tooltip="back-button-tooltip"
 						 wrap="true"
@@ -872,7 +910,7 @@
           <toolbarbutton id="ctraddon_forward-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                          label="&forwardCmd.label;"
                          command="Browser:ForwardOrForwardDuplicate"
-						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
+						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this,event);"
 						 onclick="checkForMiddleClick(this, event);"
                          tooltip="forward-button-tooltip"
 						 wrap="true"
@@ -909,6 +947,12 @@
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
+					 
+      <!--### creates a movable go button ###-->
+	  <toolbarbutton id="ctraddon_go-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
+                     label="&goCmd.label;" removable="true"
+                     onclick="gURLBar.handleCommand(event);"
+                     tooltiptext="&goEndCap.tooltip;"/>
   
 	  <!--### creates clone of fullscreen window control buttons ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"

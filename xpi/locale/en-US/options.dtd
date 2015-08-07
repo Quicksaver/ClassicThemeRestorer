@@ -1,3 +1,8 @@
+<!ENTITY % overlayDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+  %overlayDTD;
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Add-on Bar">
@@ -25,7 +30,7 @@
 <!ENTITY Ctr_tabcolors_t	"Tab colors &amp; text">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Curved tabs (Firefox default)">
+<!ENTITY Ctr_tabs0			"Curved tabs (&brandShortName; default)">
 <!ENTITY Ctr_tabs1			"Squared tabs (classic)">
 <!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
 <!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) --- [tabsontop=false] attribute">
 <!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Attribute [tabsontop=true/false] gets added to">
-<!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config preference)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabminheight	"Height:">
@@ -48,6 +53,7 @@
 <!ENTITY Ctr_tabwidthinfo	"Tab width is controlled by TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Tab width is controlled by TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_square_edges	"Squared top corners">
 <!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config preference)">
 <!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
 <!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tabs">
@@ -59,17 +65,20 @@
 <!ENTITY Ctr_closetab_4		"On tab toolbars start">
 <!ENTITY Ctr_closetab_5		"On all tabs (forced)">
 <!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Red close icon">
+<!ENTITY Ctr_closei_def		"Default icons">
 <!ENTITY Ctr_closeonleft	"Alternative position on tab">
 <!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config preference)">
+
+<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
-<!ENTITY Ctr_appbutton2		"Button on [Firefox] titlebar">
-<!ENTITY Ctr_appbutton2h	"Button on [Firefox] titlebar (hidden)">
-<!ENTITY Ctr_appbutton2io	"Button on [Firefox] titlebar (icon only)">
+<!ENTITY Ctr_appbutton2		"Button on [&brandShortName;] titlebar">
+<!ENTITY Ctr_appbutton2h	"Button on [&brandShortName;] titlebar (hidden)">
+<!ENTITY Ctr_appbutton2io	"Button on [&brandShortName;] titlebar (icon only)">
 <!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
@@ -83,9 +92,8 @@
 <!ENTITY Ctr_appbuttonc_wh	"White button color">
 <!ENTITY Ctr_appbuttonc_cu	"Custom button color">
 <!ENTITY Ctr_appbuttonI1	"Restart recommended">
-<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on Firefox titlebar!">
+<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on &brandShortName; titlebar!">
 <!ENTITY Ctr_appbuttonI2	"Button colors are only visible on titlebar and tabs toolbar!">
-<!ENTITY Ctr_alttbappb		"Alternative icons without dropmarker">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 <!ENTITY Ctr_dblclclosefx	"Double click closes current window">
@@ -129,14 +137,19 @@
 <!ENTITY Ctr_cpanelmenus	"Panel menus: compact view (bookmarks, history etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
+<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
+<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
+<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
 <!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
 <!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
+<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
+<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
 <!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Panel menu popup: hide button labels">
 <!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup">
+<!ENTITY Ctr_fxmockup		"&brandShortName; Mockup">
 <!ENTITY Ctr_tabmokcolor	"White color for tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
 <!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
@@ -144,6 +157,8 @@
 
 <!ENTITY Ctr_navthrobber1	"Clicking on activity indicator opens the following url in a new tab:">
 <!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_anewtaburl		"New tab page url">
+<!ENTITY Ctr_anewtaburlcb	"Custom new tab page url (default: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"Color names, hexcodes, rgb(a) and hsl(a) values are supported.">
 <!ENTITY Ctr_tab_tf_info2	"Inputs won't be validated!">
@@ -172,6 +187,7 @@
 <!ENTITY Ctr_starinurl		"Star-button">
 <!ENTITY Ctr_feedinurl		"RSS feed-button">
 <!ENTITY Ctr_hideurelstop	"Hide 'stop &amp; reload' buttons">
+<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
 <!ENTITY Ctr_urlbardropm	"Move dropmarker to location bars end">
 <!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
 <!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
@@ -188,7 +204,7 @@
 <!ENTITY Ctr_extrabar		"Additional Toolbars">
 <!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
 <!ENTITY Ctr_extrabar1		"Additional Toolbar">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. &brandShortName; has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
 <!ENTITY Ctr_menubar		"Menubar">
@@ -204,6 +220,7 @@
 <!ENTITY Ctr_dblclnewtab	"Double click opens a 'new' tab (using browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Hide tabs toolbar with only one visible tab">
 <!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
+<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
 <!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
 <!ENTITY Ctr_notabfog		"Remove background fog (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Remove background color (Windows AeroGlass/8)">
@@ -212,7 +229,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Add background color (OS titlebar)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Alternative position (below &brandShortName; titlebar)">
 <!ENTITY Ctr_menubarnofog	"Remove background color/fog (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
@@ -225,7 +242,8 @@
 <!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
 <!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('More Tools') at toolbars end">
+<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
 
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_highaddonsbar	"Increase height">
@@ -237,6 +255,8 @@
 <!ENTITY Ctr_pananimation	"Panel opening animation">
 <!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config preference)">
 <!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config preference)">
+<!ENTITY Ctr_fsanimation	"Fullscreen animations (about:config preference)">
+<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content (about:config preferences)">
 
 <!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
 <!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
@@ -246,31 +266,36 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Extra buttons in 'customizing' mode">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Edition Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduced a 'new search ui'. Unchecking this preference returns the 'old search ui'.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced the 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
+<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
 <!ENTITY Ctr_e_deved		"Developer Edition Theme">
 <!ENTITY Ctr_e_prefsui		"Preferences in tab">
+<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_e_pocket		"Pocket">
 
 
 <!ENTITY Ctr_pw_settings	"Settings">
 <!ENTITY Ctr_pw_set_reset	"Restore defaults">
 <!ENTITY Ctr_pw_set_predef	"Classic preset">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; preset">
 <!ENTITY Ctr_pw_set_export	"Export preferences">
 <!ENTITY Ctr_pw_set_import	"Import preferences">
+<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options may not offer visible changes in all cases">
-<!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
+<!ENTITY Ctr_special_info2	"Settings are made for &brandShortName; default theme and may not work with all third party themes!">
 <!ENTITY Ctr_support		"Support Forum">
 <!ENTITY Ctr_newversion		"New version?">
 
@@ -278,6 +303,14 @@
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY goCmd.label		"Go">
+
+<!-- For page context entries. Have to be adjusted for every locale! -->
+<!ENTITY backCmd.accesskey            "B">
+<!ENTITY forwardCmd.accesskey         "F">
+<!ENTITY reloadCmd.accesskey          "R">
+<!ENTITY stopCmd.accesskey            "S">
+<!ENTITY bookmarkPageCmd2.accesskey   "m">
 
 <!-- Fallback entities. Do not change! -->
 <!ENTITY openCmd.commandkey			"">

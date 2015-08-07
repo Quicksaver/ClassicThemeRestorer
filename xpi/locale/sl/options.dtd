@@ -1,3 +1,8 @@
+<!ENTITY % overlayDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+  %overlayDTD;
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Vrstica dodatkov">
@@ -25,20 +30,20 @@
 <!ENTITY Ctr_tabcolors_t	"Barve zavihkov in besedilo">
 
 <!ENTITY Ctr_tabs			"Zavihki">
-<!ENTITY Ctr_tabs0			"Zaokroženi zavihki (Firefoxova privzeta nastavitev)">
+<!ENTITY Ctr_tabs0			"Zaokroženi zavihki (&brandShortName;ova privzeta nastavitev)">
 <!ENTITY Ctr_tabs1			"Pravokotni zavihki (klasični)">
 <!ENTITY Ctr_tabs1m			"Pravokotni zavihki (australizirani)">
 <!ENTITY Ctr_tabs2			"Zaokroženi zavihki (nadomestni)">
 <!ENTITY Ctr_tabs3			"Zaokroženi zavihki (nadomestni Aero)">
 <!ENTITY Ctr_tabforminfo	"Videz zavihkov nadzira trenutna tema.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"Videz zavihkov ni v celoti združljiv z dodatkom 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Zavihki na vrhu (privzeto)">
 <!ENTITY Ctr_tabsontop1		"Zavihki na vrhu --- atribut [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Zavihki niso na vrhu (v1) --- atribut [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Zavihki niso na vrhu (v2) --- atribut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 je za nekatere dodatke in samo za celotne teme!">
 <!ENTITY Ctr_tabsontopI1	"Atribut [tabsontop=true/false] je dodan k">
-<!ENTITY Ctr_tabsintitlebar	"Nazivna vrstica Firefoxa (nastavitev about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Nazivna vrstica &brandShortName;a (nastavitev about:config)">
 <!ENTITY Ctr_tabwidthdef	"(privzeto)">
 <!ENTITY Ctr_tabwidthcla	"(klasično)">
 <!ENTITY Ctr_tabminheight	"Višina:">
@@ -48,6 +53,7 @@
 <!ENTITY Ctr_tabwidthinfo	"Širino zavihkov nadzira TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Širino zavihkov nadzira TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Vrednosti pod 48 slikovnih točk bodo v večini premerov povzročile napake!">
+<!ENTITY Ctr_square_edges	"Squared top corners">
 <!ENTITY Ctr_tabinsertion	"Vstavi odprti zavihek poleg trenutnega (nastavitev about:config)">
 <!ENTITY Ctr_emptyfavicon	"Obnovi prazno zaznamko (če je stran ne dobavi)">
 <!ENTITY Ctr_noemptypticon	"Odstrani prazno zaznamko iz pripetih zavihkov">
@@ -59,17 +65,20 @@
 <!ENTITY Ctr_closetab_4		"Na začetku orodne vrstice zavihkov">
 <!ENTITY Ctr_closetab_5		"Na vseh zavihkih (vsiljeno)">
 <!ENTITY Ctr_closetab_hfot	"Skrij ob enem odprtem zavihku">
-<!ENTITY Ctr_closealt		"Rdeča ikona Zapri">
+<!ENTITY Ctr_closei_def		"Default icons">
 <!ENTITY Ctr_closeonleft	"Nadomestni položaj na zavihku">
 <!ENTITY Ctr_close_wwltab	"Zapri okno z nazadje vidnim zavihkom (nastavitev about:config)">
+
+<!ENTITY Ctr_hctpinfotab	"Nekatere različice niso združljive z dodatkom 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Gumb na nazivni vrstici ni združljiv z dodatkom 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Programski gumb">
 <!ENTITY Ctr_appbutton0		"Gumb je onemogočen">
 <!ENTITY Ctr_appbutton1		"Gumb na orodni vrstici">
 <!ENTITY Ctr_appbutton1wt	"Gumb na orodni vrstici (samo besedilo)">
-<!ENTITY Ctr_appbutton2		"Gumb na nazivni vrstici [Firefoxa]">
-<!ENTITY Ctr_appbutton2h	"Gumb na nazivni vrstici [Firefoxa] (skrit)">
-<!ENTITY Ctr_appbutton2io	"Gumb na nazivni vrstici [Firefoxa] (samo ikona)">
+<!ENTITY Ctr_appbutton2		"Gumb na nazivni vrstici [&brandShortName;a]">
+<!ENTITY Ctr_appbutton2h	"Gumb na nazivni vrstici [&brandShortName;a] (skrit)">
+<!ENTITY Ctr_appbutton2io	"Gumb na nazivni vrstici [&brandShortName;a] (samo ikona)">
 <!ENTITY Ctr_paneluibtweak	"Oranžni gumb ploščastega menija na orodni vrstici zavihkov">
 <!ENTITY Ctr_appbuttonc_o	"Oranžna barva gumba (privzeto)">
 <!ENTITY Ctr_appbuttonc_a	"Modra barva gumba (Aurora)">
@@ -83,9 +92,8 @@
 <!ENTITY Ctr_appbuttonc_wh	"Bela barva gumba">
 <!ENTITY Ctr_appbuttonc_cu	"Barva gumba po meri">
 <!ENTITY Ctr_appbuttonI1	"Priporočen je ponovni zagon">
-<!ENTITY Ctr_appbuttonI1e	"Ni viden na orodni vrstici OS-a Windows, samo na orodni vrstici Firefoxa!">
+<!ENTITY Ctr_appbuttonI1e	"Ni viden na orodni vrstici OS-a Windows, samo na orodni vrstici &brandShortName;a!">
 <!ENTITY Ctr_appbuttonI2	"Barve gumba so vidne samo na nazivni vrstici in vrstici zavihkov!">
-<!ENTITY Ctr_alttbappb		"Nadomestne ikone brez spustne puščice">
 <!ENTITY Ctr_appbutmhi		"Višji položaj (če se nahaja na orodni vrstici zavihkov)">
 <!ENTITY Ctr_appbutbdl		"Skrij obrobe in barve ozadja">
 <!ENTITY Ctr_dblclclosefx	"Dvojni klik zapre trenutno okno">
@@ -129,14 +137,19 @@
 <!ENTITY Ctr_cpanelmenus	"Ploščasti meniji: strnjen pogled (zaznamki, zgodovina itd.)">
 <!ENTITY Ctr_hidezoomres	"Nadzorni gumbi za povečavo na orodni vrstici: skrij gumb za ponastavitev povečave">
 <!ENTITY Ctr_alt_newtabp	"Stran novega zavihka: nadomestni videz">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
+<!ENTITY Ctr_alt_addonsp	"Stran dodatkov 'Več': nadomestni videz">
+<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
+<!ENTITY Ctr_addonversion	"Stran dodatkov: prikaži različico dodatka">
+<!ENTITY Ctr_bmbutpanelm	"Gumb menija zaznamkov: videz ploščastega menija">
+<!ENTITY Ctr_bmbutnotext	"Gumb menija zaznamkov: skrij oznako na vrstici zaznamkov">
+<!ENTITY Ctr_skipprintpr	"Gumb Natisni: preskoči predogled tiskanja">
+<!ENTITY Ctr_tbconmenu		"Vsebinski meni orodne vrstice: skrij 'premakni v meni', 'odstrani iz orodne vrstice', 'ponovno naloži vse zavihke', 'dodaj vse zavihke med zaznamke' in 'ponovno odpri zavihek'">
 <!ENTITY Ctr_noresizerxp	"Skrij spremenilnik velikosti (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Odpri dodatno naslovno vrstico (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Pojavno okno ploščastega menija: skrij oznake gumbov">
 <!ENTITY Ctr_menupopupscr	"Pojavna okna menijev: prikaži drsnike namesto drsnih puščic">
 
-<!ENTITY Ctr_fxmockup		"Prototip Firefoxa">
+<!ENTITY Ctr_fxmockup		"Prototip &brandShortName;a">
 <!ENTITY Ctr_tabmokcolor	"Bela barva gumbov zavihkov (Zapri, Nov, Skupine, Seznam vseh)">
 <!ENTITY Ctr_tabmokcolor2	"Bela barva in temna senca besedila nedejavnih zavihkov">
 <!ENTITY Ctr_tabmokcolor3	"Bela barva ločil zavihov">
@@ -144,6 +157,8 @@
 
 <!ENTITY Ctr_navthrobber1	"Klik na kazalnik dejavnosti odpre naslednji url v novem zavihku:">
 <!ENTITY Ctr_navthrobber2	"Dodajte url ali pustite prazno">
+<!ENTITY Ctr_anewtaburl		"URL strani novega zavihka">
+<!ENTITY Ctr_anewtaburlcb	"URL strani novega zavihka po meri (privzeto: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"Podprta so imena barv, šestnajstiške kode, rga(a) in hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Vnosi ne bodo preverjeni!">
@@ -172,6 +187,7 @@
 <!ENTITY Ctr_starinurl		"Gumb Zvezdica">
 <!ENTITY Ctr_feedinurl		"Gumb vira RSS">
 <!ENTITY Ctr_hideurelstop	"Skrij gumba 'Ustavi in Ponovno naloži'">
+<!ENTITY Ctr_hideurlgo		"Skrij gumb 'pojdi'">
 <!ENTITY Ctr_urlbardropm	"Premakni spustno puščico na konec naslovne vrstice">
 <!ENTITY Ctr_hideprbutton	"Skrij ikono obvestil ob blokiranju pojavnega okna">
 <!ENTITY Ctr_urlbar_ib		"Gumb identitete strani (polje indentitete)">
@@ -188,7 +204,7 @@
 <!ENTITY Ctr_extrabar		"Dodatne orodne vrstice">
 <!ENTITY Ctr_extrabar0		"Dodatne orodne vrstice">
 <!ENTITY Ctr_extrabar1		"Dodatna orodna vrstica">
-<!ENTITY Ctr_extrabarinfo	"Preklop med načinoma 'Zavihki na vrhu' in 'Zavihki niso na vrhu' naključno spremeni vrstni red dodatnih orodnih vrstic. Za razrešitev te težave morate ponovno zagnati Firefox.">
+<!ENTITY Ctr_extrabarinfo	"Preklop med načinoma 'Zavihki na vrhu' in 'Zavihki niso na vrhu' naključno spremeni vrstni red dodatnih orodnih vrstic. Za razrešitev te težave morate ponovno zagnati &brandShortName;.">
 
 <!ENTITY Ctr_invicons		"Obrnjene ikone">
 <!ENTITY Ctr_menubar		"Vrstica z menijem">
@@ -204,7 +220,8 @@
 <!ENTITY Ctr_dblclnewtab	"Dvojni klik odpre 'nov' zavihek (z uporabo nastavitve browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Skrij orodno vrstico zavihkov okna s samo enim zavihkom">
 <!ENTITY Ctr_hidetbwote		"Zmanjšaj zakasnitev skritja ob zagonu">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote_i	"Lahko povzroči napake na vrstici zavihkov">
+<!ENTITY Ctr_hidetbwote2	"Ohrani nazivno vrstico (zavihki na vrhu)">
 <!ENTITY Ctr_notabfog		"Odstrani meglo ozadja (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Odstrani barvo ozadja (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Zmanjšaj prostor nad orodno vrstico (če je možno)">
@@ -212,7 +229,7 @@
 <!ENTITY Ctr_alttabstb2		"V razpetem načinu (zavihki na vrhu)">
 
 <!ENTITY Ctr_altmenubar		"Dodaj barvo ozadja (nazivna vrstica OS-a)">
-<!ENTITY Ctr_altmenubarpos	"Nadomestni položaj (pod nazivno vrstico Firefoxa)">
+<!ENTITY Ctr_altmenubarpos	"Nadomestni položaj (pod nazivno vrstico &brandShortName;a)">
 <!ENTITY Ctr_menubarnofog	"Odstrani barvo ozadja/meglo (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Modre barve Aero za orodne vrstice (in zavihke)">
@@ -224,8 +241,9 @@
 <!ENTITY Ctr_nonavborder	"Orodna vrstica zaznamkov: dodaj zgornjo obrobo orodni vrstici">
 <!ENTITY Ctr_nonavtbborder	"Orodne vrstice na vrhu: odstrani obrobe orodnih vrstic">
 <!ENTITY Ctr_hidesbclose	"Stranske vrstice: skrij gumb Zapri stranske vrstice">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
-<!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('chevron') na koncu orodne vrstice">
+<!ENTITY Ctr_notextshadow	"Orodne vrstice: skrij senco besedila orodnih vrstic in zavihkov">
+<!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('More Tools') na koncu orodne vrstice">
+<!ENTITY Ctr_tbsep_winc		"Zgornje orodne vrstice: dodatna ločila orodnih vrstic">
 
 <!ENTITY Ctr_closeabarbut	"Skrij gumb Zapri vrstice dodatkov">
 <!ENTITY Ctr_highaddonsbar	"Povečaj višino">
@@ -237,6 +255,8 @@
 <!ENTITY Ctr_pananimation	"Animacija odpiranja podokna">
 <!ENTITY Ctr_tabanimation	"Animacija zapiranja/odpiranja zavihkov (nastavitev about:config)">
 <!ENTITY Ctr_dlanimation	"Animacija 'obvestila o prenosih' (nastavitev about:config)">
+<!ENTITY Ctr_fsanimation	"Celozaslonske animacije (nastavitev about:config)">
+<!ENTITY Ctr_fsaduration	"Celozaslonske animacije za vsebino HTML5 (nastavitev about:config)">
 
 <!ENTITY Ctr_toolsitem		"Predmet menija v meniju Orodja">
 <!ENTITY Ctr_appmenuitem	"Predmet menija v meniju programskega gumba">
@@ -249,28 +269,33 @@
 <!ENTITY Ctr_nodevtheme		"Prepreči namestitev teme 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Napredno">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ je vpeljal 'nove možnosti izrisa', ki na nekaterih sistemih povzročajo 'zamrznitev zavihkov'. Odznačitev te nastavitve bo rešila to težavo.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ je vpeljal 'nov ui za iskanje'. Odznačitev te nastavitve povrne 'stari ui za iskanje'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ je vpeljal možnosti 'klicanja in pogovorov'. Odznačitev te nastavitve jih odstrani.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ je vpeljal novo temo 'Developer theme'. Odznačitev teh nastavitev to temo in pripadajoči gumb v načinu prilagoditve onemogoči.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ je vpeljal nastavitve v zavihku. Odznačitev te nastavitve obnovi staro okno nastavitev.">
-<!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ je vpeljal 'nov ui za iskanje'. Odznačitev te nastavitve povrne 'stari ui za iskanje'.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ je vpeljal možnosti 'klicanja in pogovorov'. Odznačitev te nastavitve jih odstrani.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ je vpeljal novo temo 'Developer theme'. Odznačitev teh nastavitev to temo in pripadajoči gumb v načinu prilagoditve onemogoči.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ je vpeljal nastavitve v zavihku. Odznačitev te nastavitve obnovi staro okno nastavitev.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ je vpeljal nov 'način za branje'. Odznačitev teh nastavitev ga onemogoči in odstrani njegovo ikono iz naslovne vrstice.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ je vpeljal storitev 'Pocket'. Odznačitev te nastavitve jo onemogoči in iz orodnih vrstic odstrani njen gumb.">
+<!ENTITY Ctr_fx38pocket2	"Opomba: Premikanje gumba 'Pocket' v 'paleto za prilagoditev' pred onemogočanjem te nastavitve odstani tudi vnose 'Pocket' v menijih zaznamkov in bralnika.">
+<!ENTITY Ctr_e_searchui		"Videz iskanja">
+<!ENTITY Ctr_e_loop			"Klicanje in pogovori">
+<!ENTITY Ctr_e_deved		"Tema Developer Edition">
+<!ENTITY Ctr_e_prefsui		"Nastavitve v zavihku">
+<!ENTITY Ctr_e_readermode	"Način za branje">
+<!ENTITY Ctr_e_pocket		"Pocket">
 
 
 <!ENTITY Ctr_pw_settings	"Nastavitve">
 <!ENTITY Ctr_pw_set_reset	"Obnovi privzete nastavitve">
 <!ENTITY Ctr_pw_set_predef	"Klasične prednastavljene nastavitve">
-<!ENTITY Ctr_pw_set_preaus	"Firefoxove prednastavljene nastavitve">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName;ove prednastavljene nastavitve">
 <!ENTITY Ctr_pw_set_export	"Izvozi nastavitve">
 <!ENTITY Ctr_pw_set_import	"Uvozi nastavitve">
+<!ENTITY Ctr_pw_set_syncon	"Dodaj v Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Odstrani iz Synca">
 
 <!ENTITY Ctr_special_font	"Nastavitve barve ozadja so samo za privzeto temo!">
 <!ENTITY Ctr_special_info	"Nekatere možnosti v vseh primerih morda ne bodo povzročile vidnih sprememb">
-<!ENTITY Ctr_special_info2	"Nastavitve so narejene za Firefoxovo privzeto temo in morda ne bodo delovale z vsemi temami tretjih oseb!">
+<!ENTITY Ctr_special_info2	"Nastavitve so narejene za &brandShortName;ovo privzeto temo in morda ne bodo delovale z vsemi temami tretjih oseb!">
 <!ENTITY Ctr_support		"Forum za podporo">
 <!ENTITY Ctr_newversion		"Nova različica?">
 
@@ -278,6 +303,14 @@
 <!ENTITY Ctr_openInPrivateWindow "Odpri v novem Zasebnem oknu">
 <!ENTITY Ctr_openInPrivateWindow.accesskey "Z">
 <!ENTITY appMenuGettingStarted.label "Začetek">
+<!ENTITY goCmd.label		"Pojdi">
+
+<!-- For page context entries. Have to be adjusted for every locale! -->
+<!ENTITY backCmd.accesskey            "N">
+<!ENTITY forwardCmd.accesskey         "p">
+<!ENTITY reloadCmd.accesskey          "P">
+<!ENTITY stopCmd.accesskey            "s">
+<!ENTITY bookmarkPageCmd2.accesskey   "m">
 
 <!-- Fallback entities. Leave empty! -->
 <!ENTITY openCmd.commandkey			"">

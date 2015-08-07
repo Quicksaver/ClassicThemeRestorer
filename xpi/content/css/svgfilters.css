@@ -20,6 +20,7 @@
 	}
 
 	/*Red*/
+	#pocket-button:not([open]) .toolbarbutton-icon,
 	#PanelUI-quit:not(:hover) .toolbarbutton-icon,
 	#web-apps-button .toolbarbutton-icon,
 	#e10s-button .toolbarbutton-icon,
@@ -50,6 +51,7 @@
 	#forward-button .toolbarbutton-icon,
 	#new-window-button .toolbarbutton-icon,
 	#new-tab-button .toolbarbutton-icon,
+	#ctraddon_go-button .toolbarbutton-icon,
 	.search-go-button,
 	#downloads-button .toolbarbutton-icon,
 	#go-button:hover,

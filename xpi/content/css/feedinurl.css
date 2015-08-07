@@ -47,6 +47,11 @@
 	  visibility: visible !important;
 	}
 	
+	/*Fx40+ support*/
+	#main-window[fx40plus="true"] #nav-bar #urlbar-icons :-moz-any(#feed-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-icon {
+	  width: unset !important;;
+	}
+	
 	/**/
 	#urlbar-icons #feed-button .toolbarbutton-icon { 
 	  filter: none !important;
