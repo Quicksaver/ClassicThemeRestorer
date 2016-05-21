@@ -8,6 +8,13 @@
 	  background-clip: padding-box !important;
 	}
 	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #TabsToolbar:not(:-moz-lwtheme) {
+		border-left: 0px !important;
+		border-right: 0px !important;
+	  }
+	}
+	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;
 	  margin-bottom: 3px !important;
@@ -51,6 +58,10 @@
 	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),	
 	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
 		border-bottom: 0 !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme){
+		background: #f6f6f6 !important;
 	  }
 	}
 	

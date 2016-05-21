@@ -1,6 +1,6 @@
 @import url(chrome://ctraddon_os_special/skin/alt_addonsmanagerextra.css);
 
-@-moz-document url(about:addons) {
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
 
 	/* main colors addons-page */
 	#addons-page {
@@ -56,7 +56,11 @@
 	  padding: 0 !important;
 	  margin: 0 !important;
 	}
-	
+
+	#addons-page #header-search{
+	  min-height: unset !important;
+	}
+
 	#addons-page #header-search .textbox-input-box{
 	  height: 18px !important;
 	}
@@ -92,6 +96,7 @@
 	}
 
 	/* buttons / menulists */
+	#addons-page  #custombutons-add-new,
 	#addons-page #header button,
 	#addons-page #header #header-utils-btn,
 	#addons-page #list-view .global-info button,
@@ -101,17 +106,21 @@
 	#addons-page #update-actions button,
 	#addons-page #updates-list-empty button,
 	#addons-page .relnotes-toggle,
-	#list-view menulist{
+	#list-view menulist,
+	#updates-list menulist{
 	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	}
 	
+	#addons-page  #custombutons-add-new,
 	#addons-page #header button:not(.button-link),
 	#addons-page #header #header-utils-btn,
 	#addons-page #list-view .global-info button:not(.button-link),
 	#addons-page #list-view .discover-button,
 	#addons-page #list-view menulist,
+	#addons-page #updates-list menulist,
 	#addons-page .status-control-wrapper button,
 	#addons-page #userstyle-sorting .addon-control,
 	#addons-page #update-actions button,
@@ -128,12 +137,17 @@
 	#addons-page button.sorter{
 	  padding:2px !important;
 	  min-height: 26px !important;
-		height: unset !important;
+	  height: unset !important;
 	}
 
 	#addons-page #header-search{
 	  padding: 1px !important;
 	  height: unset !important;
+	}
+	
+	/* search */
+	#search-filter {
+	  font-size: 90% !important;
 	}
 	
 	/* add-on entry */
@@ -152,10 +166,15 @@
 	  font-size: 90% !important;
 	}
 	
+	.addon .description-outer-container * {
+	  font-size: 100% !important;
+	}
+	
 	/* detail view */
 	#detail-view button:not(.button-link):not(.text-link),
 	#detail-view menulist{
 	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
@@ -183,6 +202,12 @@
 	  width: 16px !important;
 	  height: 16px !important;
 	  margin: 0 !important;
+	}
+	
+	/* remove navigation buttons */
+	#nav-header #back-btn,
+	#nav-header #forward-btn {
+	  visibility: hidden !important;
 	}
 
 }

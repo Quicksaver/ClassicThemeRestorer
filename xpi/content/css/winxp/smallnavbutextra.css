@@ -11,9 +11,10 @@
 	  transition: none !important;
 	}
 	
-	#main-window[fx42plus="true"] #nav-bar #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 1px !important;
-	  -moz-padding-start: 3px !important;
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window[fx42plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 3px !important;
 	}
 	
 	#nav-bar #notification-popup-box:not([hidden]) {
@@ -54,8 +55,17 @@
 		  margin: 0px !important;
 		}
 
+		#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon {
+		  padding: 2px 1px !important;
+		}
+
 		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon {
 		  padding: 1px 1px !important;
+		  margin: 0px !important;
+		}
+
+		#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon {
+		  padding: 2px 1px !important;
 		  margin: 0px !important;
 		}
 	}
@@ -87,6 +97,7 @@
 				  inset 0px 12px 0px 0px rgba(255,255,255,0.5)  !important;
 	  border-radius: 3px !important;
 	}
+
 	#nav-bar .toolbarbutton-1:not([disabled])[checked],
 	#nav-bar .toolbarbutton-1:not([disabled])[open],
 	#nav-bar .toolbarbutton-1:not([disabled]):active {
@@ -96,6 +107,28 @@
 				  inset 0px 0px 4px rgba(0,0,0,0.7),
 				  inset 0px 12px 0px 0px rgba(255,255,255,0.5) !important;
 	  border-radius: 3px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+
+		#nav-bar .toolbarbutton-1:not([disabled]):hover {
+		  box-shadow:	inset 0 1px white,
+						inset 0 -1px #808080,
+						inset 1px 0 white,
+						inset -1px 0 #808080 !important;
+		  border-radius: 0px !important;
+		}
+		#nav-bar .toolbarbutton-1:not([disabled])[checked],
+		#nav-bar .toolbarbutton-1:not([disabled])[open],
+		#nav-bar .toolbarbutton-1:not([disabled]):active
+		#nav-bar .toolbarbutton-1:not([disabled]):hover:active {
+		  box-shadow:	inset 0 1px #808080,
+						inset 0 -1px white,
+						inset 1px 0 #808080,
+						inset -1px 0 white !important;
+		  border-radius: 0px !important;
+		}
+
 	}
 	
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
@@ -141,7 +174,7 @@
 
     #navigator-toolbox #nav-bar #back-button[disabled] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-dropmarker > image,
-	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button:not([label="Tile Tabs"]) .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1:-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before{
@@ -247,11 +280,14 @@
 	  margin-right: 0px !important;
 	}
 
-	#nav-bar #ctraddon_puib_separator{
-	  margin-top: 2px !important;
-	  margin-bottom: 2px !important;
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
 	}
-	
+
 	/* default badge buttons: loop/panelUI */
 	#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
 	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
@@ -295,6 +331,14 @@
       padding-left: 1px !important;
 	  margin-right: 2px !important;
       margin-left: 2px !important;
+	}
+	
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack .toolbarbutton-badge {
+      min-width: 0px !important;
+	  width: 10px !important;
+      font-size:75% !important;
+	  margin-top: -4px !important;
+	  -moz-margin-end: -3px !important;
 	}
 
 	#nav-bar toolbarbutton .toolbarbutton-badge-container,
